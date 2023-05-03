@@ -1,0 +1,311 @@
+/* Background */
+body {
+    background-color: #1f1f1f;
+    margin: 0 0 100%;
+    text-align: center;
+  }
+
+  html {
+    position: relative;
+    min-height: 100%;
+  }
+  
+  /* Header */
+  header {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 20px;
+    width: 100%;
+  }
+  
+  h1 {
+    font-family: 'Impact', sans-serif;
+    font-size: 5em;
+    text-align: center;
+  }
+  
+  /* Navigation */
+  nav {
+    background-color: #5c5c5c;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  nav a {
+    color: #ffffff;
+    font-size: 1.2em;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  
+  /* Main content */
+  main {
+    color: #ffffff;
+    padding: 50px;
+  }
+  
+  h2 {
+    font-size: 3em;
+    margin-top: 0;
+  }
+  
+  p {
+    font-size: 1.2em;
+    line-height: 1.5;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #5c5c5c;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+  }
+  
+  footer p {
+    margin: 0;
+  }
+  
+  /* Carousel */
+  
+  .container {
+    position: relative;
+    width: 320px;
+    margin: 100px auto 0 auto;
+    perspective: 1000px;
+  }
+  
+  .carousel {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d; 
+    animation: rotate360 40s infinite forwards linear;
+  }
+  .carousel__face { 
+    position: absolute;
+    width: 300px;
+    height: 187px;
+    top: 20px;
+    left: 10px;
+    right: 10px;
+    background-size: cover;
+    box-shadow:inset 0 0 0 2000px rgba(0,0,0,0.5);
+    display: flex;
+  }
+  
+  span {
+    margin: auto;
+    font-size: 2rem;
+  }
+  
+  
+  .carousel__face:nth-child(1) {
+    background-image: url("https://th.bing.com/th/id/R.488c16930dfd2a8f8641e5da250012c8?rik=LcscsyXMOeymJQ&pid=ImgRaw&r=0");
+    transform: rotateY(  0deg) translateZ(430px); }
+  .carousel__face:nth-child(2) { 
+    background-image: url("https://th.bing.com/th/id/R.e81cbd46326f15cd61b2151f7aea0d84?rik=M5jkHI3IIvPp9w&pid=ImgRaw&r=0");
+      transform: rotateY( 60deg) translateZ(430px); }
+  .carousel__face:nth-child(3) {
+    background-image: url("https://www.nme.com/wp-content/uploads/2020/07/GettyImages-949706970-1392x884.jpg");
+    transform: rotateY( 120deg) translateZ(430px); }
+  .carousel__face:nth-child(4) {
+    background-image: url("https://th.bing.com/th/id/R.5e332864ea242d3d2e606f872b68c3c2?rik=5mvOkB44subxEg&riu=http%3a%2f%2fmedia.gq.com%2fphotos%2f55fc7dab182edca8060a76cf%2f16%3a9%2fpass%2fsip-the-smiths-01.jpg&ehk=jE2KDqJc2ZMI3xRUnsjyyox3hLtGi7F3nUYQJRuzUvA%3d&risl=&pid=ImgRaw&r=0");
+    transform: rotateY(180deg) translateZ(430px); }
+  .carousel__face:nth-child(5) { 
+    background-image: url("https://th.bing.com/th/id/R.20fb57b1e4f7eda61b2e6df02e267148?rik=28TnzzZ1gakE0w&riu=http%3a%2f%2fcoogradio.com%2fwp-content%2fuploads%2f2015%2f04%2fthe_strokes.jpg&ehk=3m9%2bEjRpXE6QNQ7n20PMPG2oayMU4wxwY82CoWpvzWQ%3d&risl=&pid=ImgRaw&r=0");
+   transform: rotateY(240deg) translateZ(430px); }
+  .carousel__face:nth-child(6) { 
+    background-image: url("https://th.bing.com/th/id/OIP.7tyx2OxMstj9cDZWl57qmQHaGu?pid=ImgDet&rs=1");
+   transform: rotateY(300deg) translateZ(430px); }
+   /*carousel*/
+  
+  
+  
+  @keyframes rotate360 {
+    from {
+      transform: rotateY(0deg);
+    }
+    to {
+      transform: rotateY(-360deg);
+    }
+  }
+  
+
+  /* Split the screen in half */
+.split {
+  margin-top: 285px;
+  height: 100%;
+  width: 50%;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Control the left side */
+.left {
+  left: 0;
+  background-color: #556B2F;
+}
+
+/* Control the right side */
+.right {
+  right: 0;
+  background-color: #FFDEAD;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.centered img {
+  width: 450px;
+  border-radius: 50%;
+}
+
+
+#Humbug {
+  float: right;
+  margin: .5em;
+  padding: .25em;
+  border: 4px solid #FFFBEB;
+  background-color: #290025;
+  margin-bottom: 2em;
+}
+
+#AM {
+  float: right;
+  margin: .5em;
+  padding: .25em;
+  border: 4px solid white;
+  background-color: black;
+  margin-left: 65px;
+  margin-bottom: 2em;
+}
+
+#Spring {
+  float: right;
+  margin: .5em;
+  padding: .25em;
+  border: 4px solid #ffccd5;
+  background-color: white;
+  color: #000000;
+  margin-left: 65px;
+  margin-bottom: 2em;
+}
+
+#Hozier {
+  float: right;
+  margin: .5em;
+  padding: .25em;
+  border: 4px solid #FF8400;
+  background-color: #4F200D;
+  margin-left: 65px;
+  margin-bottom: 2em;
+}
+
+.news {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.news-item {
+  flex-basis: calc(33.33% - 20px);
+  margin-bottom: 40px;
+  background-color: #262626;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.news-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.news-item .news-content {
+  padding: 20px;
+}
+
+.news-item h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #ff2e63;
+  text-shadow: 0px 0px 5px #ff2e63;
+}
+
+.news-item p {
+  font-weight: 300;
+  font-size: 18px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.news-item a {
+  color: #ffffff;
+  background-color: #ff2e63;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.news-item a:hover {
+  background-color: #ffffff;
+  color: #ff2e63;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 20px;
+}
+
+a:hover {
+  color: blue;
+}
+
+.amtext {
+  text-decoration: none;
+  color: #FFDEAD;
+  font-weight: bold;
+}
+
+.waltext {
+  text-decoration: none;
+  color: #556B2F;
+  font-weight: bold;
+}
+
+.res {
+  text-decoration: none;
+  color: whitesmoke;
+  font-weight: 300;
+}
